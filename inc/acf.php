@@ -8,14 +8,15 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-function conflict_show_relationship(){
+function conflict_show_relationship($heading){
     if(get_field('fellow_relationship')){
         $relationship = get_field('fellow_relationship');
+        echo "<h2 class='relationship-heading'>{$heading}</h2>";
         foreach ($relationship as $key => $relation) {
             // code...
             $id = $relation->ID;
             $title = $relation->post_title;
-            $img = get_the_post_thumbnail($id, 'small', array('class'=>'fellow-img'));
+            $img = get_the_post_thumbnail($id, 'thumbnail', array('class'=>'relationship-img'));
             $link = get_permalink($relation->ID);
             echo "<div class='relation'>
                     {$img}

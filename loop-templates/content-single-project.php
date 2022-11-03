@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="col-md-7">
 				<?php
 				the_content();
-				conflict_show_relationship();
+				conflict_show_relationship('Fellow');
 				?>
 			</div>
 		</div>
