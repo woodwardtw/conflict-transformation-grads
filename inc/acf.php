@@ -8,6 +8,23 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+function conflict_show_relationship(){
+    if(get_field('fellow_relationship')){
+        $relationship = get_field('fellow_relationship');
+        foreach ($relationship as $key => $relation) {
+            // code...
+            $title = $relation->post_title;
+            $link = get_permalink($relation->ID);
+            echo "<div class='relation'>
+                        <a href=''>
+                            {$title}
+                        </a>
+                    </div>";
+        }
+
+    }
+}
+
 
 function conflict_bidirectional_acf_update_value( $value, $post_id, $field  ) {
     
