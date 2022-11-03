@@ -65,7 +65,7 @@ function create_fellow_cpt() {
     'show_in_rest' => true,
     'publicly_queryable' => true,
     'capability_type' => 'post',
-    'menu_icon' => 'dashicons-universal-access-alt',
+    'menu_icon' => 'dashicons-businesswoman',
   );
   register_post_type( 'fellow', $args );
   
@@ -132,7 +132,7 @@ function create_project_cpt() {
     'show_in_rest' => true,
     'publicly_queryable' => true,
     'capability_type' => 'post',
-    'menu_icon' => 'dashicons-universal-access-alt',
+    'menu_icon' => 'dashicons-welcome-widgets-menus',
   );
   register_post_type( 'project', $args );
   
@@ -199,7 +199,7 @@ function create_partner_cpt() {
     'show_in_rest' => true,
     'publicly_queryable' => true,
     'capability_type' => 'post',
-    'menu_icon' => 'dashicons-universal-access-alt',
+    'menu_icon' => 'dashicons-thumbs-up',
   );
   register_post_type( 'partner', $args );
   
@@ -208,3 +208,78 @@ function create_partner_cpt() {
   $wp_rewrite->flush_rules();
 }
 add_action( 'init', 'create_partner_cpt', 0 );
+
+
+add_action( 'init', 'create_theme_taxonomies', 0 );
+function create_theme_taxonomies()
+{
+  // Add new taxonomy, NOT hierarchical (like tags)
+  $labels = array(
+    'name' => _x( 'Themes', 'taxonomy general name' ),
+    'singular_name' => _x( 'theme', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Themes' ),
+    'popular_items' => __( 'Popular Themes' ),
+    'all_items' => __( 'All Themes' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Themes' ),
+    'update_item' => __( 'Update theme' ),
+    'add_new_item' => __( 'Add New theme' ),
+    'new_item_name' => __( 'New theme' ),
+    'add_or_remove_items' => __( 'Add or remove Themes' ),
+    'choose_from_most_used' => __( 'Choose from the most used Themes' ),
+    'menu_name' => __( 'Theme' ),
+  );
+
+//registers taxonomy specific post types - default is just post
+  register_taxonomy('themes', array('project','fellow'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'theme' ),
+    'show_in_rest'          => true,
+    'rest_base'             => 'theme',
+    'rest_controller_class' => 'WP_REST_Terms_Controller',
+    'show_in_nav_menus' => true,    
+  ));
+}
+
+add_action( 'init', 'create_year_taxonomies', 0 );
+function create_year_taxonomies()
+{
+  // Add new taxonomy, NOT hierarchical (like tags)
+  $labels = array(
+    'name' => _x( 'Years', 'taxonomy general name' ),
+    'singular_name' => _x( 'year', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Years' ),
+    'popular_items' => __( 'Popular Years' ),
+    'all_items' => __( 'All Years' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Years' ),
+    'update_item' => __( 'Update year' ),
+    'add_new_item' => __( 'Add New year' ),
+    'new_item_name' => __( 'New year' ),
+    'add_or_remove_items' => __( 'Add or remove Years' ),
+    'choose_from_most_used' => __( 'Choose from the most used Years' ),
+    'menu_name' => __( 'Year' ),
+  );
+
+//registers taxonomy specific post types - default is just post
+  register_taxonomy('years', array('post'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'year' ),
+    'show_in_rest'          => true,
+    'rest_base'             => 'year',
+    'rest_controller_class' => 'WP_REST_Terms_Controller',
+    'show_in_nav_menus' => true,    
+  ));
+}
+
+
