@@ -268,7 +268,7 @@ function create_year_taxonomies()
   );
 
 //registers taxonomy specific post types - default is just post
-  register_taxonomy('years', array('post'), array(
+  register_taxonomy('years', array('fellow','project'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
