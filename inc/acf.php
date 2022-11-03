@@ -13,10 +13,13 @@ function conflict_show_relationship(){
         $relationship = get_field('fellow_relationship');
         foreach ($relationship as $key => $relation) {
             // code...
+            $id = $relation->ID;
             $title = $relation->post_title;
+            $img = get_the_post_thumbnail($id, 'small', array('class'=>'fellow-img'));
             $link = get_permalink($relation->ID);
             echo "<div class='relation'>
-                        <a href=''>
+                    {$img}
+                        <a href='{$link}'>
                             {$title}
                         </a>
                     </div>";
