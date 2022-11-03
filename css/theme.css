@@ -17097,4 +17097,24 @@ p, ul, ol {
   margin-bottom: 1.5rem;
 }
 
+.home-block {
+  margin: 20px;
+  height: 300px;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid #0d395f;
+  transition: all 0.4s ease;
+}
+
+.home-block:hover {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  box-shadow: 6px 6px #e5f1fa;
+}
+
+.home-link {
+  margin-top: 120px;
+  display: block;
+}
+
 /*# sourceMappingURL=theme.css.map */

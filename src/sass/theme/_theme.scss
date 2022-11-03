@@ -9,3 +9,23 @@ p, ul, ol {
 	font-size: 1.125rem;
     margin-bottom: 1.5rem;
 }
+
+
+.home-block {
+	margin: 20px;
+	height: 300px;
+	text-align: center;
+	font-size: 2rem;
+	border: 1px solid $blue;
+	transition: all .4s ease;
+}
+
+.home-block:hover {
+  	transform: scale(1.02);
+  	box-shadow: 6px 6px $light-blue;
+}
+
+.home-link {
+	margin-top: 120px;
+	display: block;
+}

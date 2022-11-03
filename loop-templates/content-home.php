@@ -19,7 +19,9 @@ defined( 'ABSPATH' ) || exit;
 
 
 	<div class="entry-content">
-
+		<div class="row">
+			<?php conflict_home_blocks();?>
+		</div>
 		<?php
 		the_content();
 		understrap_link_pages();
