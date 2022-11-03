@@ -57,3 +57,12 @@ add_filter( 'facetwp_shortcode_html', function( $output, $atts) {
     }
     return $output; 
 }, 10, 2 );
+
+
+function conflict_resource_image(){
+	$id = get_the_ID();
+	$thumb = get_the_post_thumbnail($id, 'medium', array('class'=>'fellow-img'));
+	return $thumb;
+}
+
+add_image_size( 'fellow', 500, 500, true );
