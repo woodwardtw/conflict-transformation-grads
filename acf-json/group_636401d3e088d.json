@@ -1,9 +1,9 @@
 {
-    "key": "group_6364012e756f2",
-    "title": "Fellow",
+    "key": "group_636401d3e088d",
+    "title": "Project",
     "fields": [
         {
-            "key": "field_63640133b96cc",
+            "key": "field_636401d8514a8",
             "label": "Fellow Relationship",
             "name": "fellow_relationship",
             "type": "relationship",
@@ -16,7 +16,7 @@
                 "id": ""
             },
             "post_type": [
-                "project"
+                "fellow"
             ],
             "taxonomy": "",
             "filters": [
@@ -33,7 +33,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "fellow"
+                "value": "project"
             }
         ]
     ],
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667499620
+    "modified": 1667499588
 }
