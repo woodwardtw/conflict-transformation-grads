@@ -51,7 +51,7 @@ foreach ( $understrap_includes as $file ) {
  ** layout template
  **/
 add_filter( 'facetwp_shortcode_html', function( $output, $atts) {
-    if ( $atts['template'] = 'example' ) { // replace 'example' with name of your template
+    if ( $atts['template'] = 'fellows' || $atts['template'] = 'projects' ) { // replace 'example' with name of your template
     /** modify replacement as needed, make sure you keep the facetwp-template class **/
         $output = str_replace( 'class="facetwp-template"', 'class="facetwp-template row"', $output );
     }
@@ -63,6 +63,15 @@ function conflict_resource_image(){
 	$id = get_the_ID();
 	$thumb = get_the_post_thumbnail($id, 'thumbnail', ['class'=>'fellow-img img-fluid']);
 	return $thumb;
+}
+
+function conflict_get_year($id){
+	$terms = get_the_terms( $id, 'years');
+	if($terms){
+		echo $terms[0]->name;
+	} else {
+		echo '&nbsp;';
+	}
 }
 
 set_post_thumbnail_size(200, 200, true);
