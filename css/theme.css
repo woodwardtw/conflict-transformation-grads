@@ -17110,7 +17110,7 @@ article {
   transition: all 0.4s ease;
 }
 
-.home-block:hover, .relation:hover, .card.fellow-facet:hover {
+.home-block:hover, .relation:hover, .card.fellow-facet:hover, .card.project-facet:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
   box-shadow: 6px 6px #dedede;
@@ -17155,15 +17155,15 @@ article {
   outline: 1px solid #0d395f;
 }
 
-.card.fellow-facet {
+.card.fellow-facet, .card.project-facet {
   border-radius: 0;
   border-color: #0d395f;
   transition: all 0.4s ease;
   margin: 20px 0;
-  background-color: #e5f1fa;
+  background-color: #fff;
 }
 
-.fellow-facet a {
+.fellow-facet a, .project-facet a {
   font-size: 1.3rem;
   text-align: center;
   font-weight: 700;
