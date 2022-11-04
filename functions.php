@@ -86,7 +86,26 @@ function conflict_show_years(){
 			$name = $term->name;
 			$term_id = $term->term_id;
 			$link = get_term_link( $term_id, 'years' );
-			echo "<div class=''>
+			echo "<div class='year-link'>
+					<a href='{$link}'>{$name}</a>
+				</div>";
+		}
+	} else {
+		echo '&nbsp;';
+	}
+}
+
+
+
+function conflict_show_themes(){
+	$id = get_the_ID();
+	$terms = get_the_terms( $id, 'themes');
+	if($terms){
+		foreach ($terms as $key => $term) {
+			$name = $term->name;
+			$term_id = $term->term_id;
+			$link = get_term_link( $term_id, 'themes' );
+			echo "<div class='theme-link'>
 					<a href='{$link}'>{$name}</a>
 				</div>";
 		}

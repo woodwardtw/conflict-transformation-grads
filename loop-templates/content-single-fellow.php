@@ -25,6 +25,7 @@ defined( 'ABSPATH' ) || exit;
 					<?php 
 						echo get_the_post_thumbnail( $post->ID, 'medium', array('class'=>'img-fluid') ); 
 						conflict_show_years();	
+						conflict_show_themes();
 					?>
 			</div>
 			<div class="col-md-7">
