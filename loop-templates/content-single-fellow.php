@@ -22,7 +22,10 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 		<div class="row">
 			<div class="col-md-5">
-					<?php echo get_the_post_thumbnail( $post->ID, 'medium', array('class'=>'img-fluid') ); ?>
+					<?php 
+						echo get_the_post_thumbnail( $post->ID, 'medium', array('class'=>'img-fluid') ); 
+						conflict_show_years();	
+					?>
 			</div>
 			<div class="col-md-7">
 				<?php

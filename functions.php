@@ -77,3 +77,20 @@ function conflict_get_year($id){
 set_post_thumbnail_size(200, 200, true);
 
 add_image_size( 'fellow', 500, 500, true );
+
+function conflict_show_years(){
+	$id = get_the_ID();
+	$terms = get_the_terms( $id, 'years');
+	if($terms){
+		foreach ($terms as $key => $term) {
+			$name = $term->name;
+			$term_id = $term->term_id;
+			$link = get_term_link( $term_id, 'years' );
+			echo "<div class=''>
+					<a href='{$link}'>{$name}</a>
+				</div>";
+		}
+	} else {
+		echo '&nbsp;';
+	}
+}
