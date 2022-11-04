@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_63640133b96cc",
-            "label": "Fellow Relationship",
+            "label": "Project Relationship",
             "name": "fellow_relationship",
             "type": "relationship",
             "instructions": "",
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667499620
+    "modified": 1667562350
 }

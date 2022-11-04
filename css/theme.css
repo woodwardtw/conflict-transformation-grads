@@ -17097,6 +17097,10 @@ p, ul, ol {
   margin-bottom: 1.5rem;
 }
 
+article {
+  margin: 0 4vw;
+}
+
 .home-block {
   margin: 20px;
   height: 300px;
@@ -17109,7 +17113,8 @@ p, ul, ol {
 .home-block:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
-  box-shadow: 6px 6px #e5f1fa;
+  box-shadow: 6px 6px #dedede;
+  background-color: #e5f1fa;
 }
 
 .home-link {

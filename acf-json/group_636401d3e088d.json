@@ -26,6 +26,22 @@
             "min": "",
             "max": "",
             "return_format": "object"
+        },
+        {
+            "key": "field_6364faaed99cd",
+            "label": "Explore More Link",
+            "name": "explore_more_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -46,5 +62,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667499588
+    "modified": 1667562191
 }

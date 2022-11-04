@@ -11,6 +11,10 @@ p, ul, ol {
 }
 
 
+article {
+	margin: 0 4vw;
+}
+
 .home-block {
 	margin: 20px;
 	height: 300px;
@@ -22,7 +26,8 @@ p, ul, ol {
 
 .home-block:hover {
   	transform: scale(1.02);
-  	box-shadow: 6px 6px $light-blue;
+  	box-shadow: 6px 6px $gray;
+  	background-color: $light-blue;
 }
 
 .home-link {
