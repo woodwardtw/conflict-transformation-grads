@@ -17110,7 +17110,7 @@ article {
   transition: all 0.4s ease;
 }
 
-.home-block:hover {
+.home-block:hover, .relation:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
   box-shadow: 6px 6px #dedede;
@@ -17129,6 +17129,21 @@ article {
   border-radius: 50px;
   padding: 10px;
   font-size: 1.3rem;
+}
+
+.relation {
+  margin: 20px 0;
+  transition: all 0.4s ease;
+}
+
+.relationship-img {
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px;
+}
+
+.relation h3, .relation .h3 {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=theme.css.map */

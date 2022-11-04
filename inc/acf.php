@@ -20,11 +20,11 @@ function conflict_show_relationship($heading){
             $title = $relation->post_title;
             $img = get_the_post_thumbnail($id, 'thumbnail', array('class'=>'relationship-img'));
             $link = get_permalink($relation->ID);
-            echo "<div class='relation'>
+            echo "<div class='relation position-relative'>
                     {$img}
-                        <a href='{$link}'>
+                        <h3><a href='{$link}' class='stretched-link'>
                             {$title}
-                        </a>
+                        </a></h3>
                     </div>";
         }
 
