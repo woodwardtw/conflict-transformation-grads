@@ -24,9 +24,9 @@ article {
 	transition: all .4s ease;
 }
 
-.home-block:hover, .relation:hover, .card.fellow-facet:hover, .card.project-facet:hover {
+.home-block:hover, .relation:hover, .card.fellow-facet:hover, .card.project-facet:hover, .card.partner-facet:hover {
   	transform: scale(1.02);
-  	box-shadow: 6px 6px $gray;
+  	box-shadow: 6px 6px 5px $gray;
   	background-color: $light-blue;
 }
 
@@ -69,7 +69,7 @@ article {
     outline: 1px solid $primary;
 }
 
-.card.fellow-facet, .card.project-facet {
+.card.fellow-facet, .card.project-facet, .card.partner-facet {
 	border-radius: 0;
 	border-color: $primary;
 	transition: all .4s ease;
@@ -77,7 +77,7 @@ article {
 	background-color: #fff;
 }
 
-.fellow-facet a, .project-facet a {
+.fellow-facet a, .project-facet a, .partner-facet .title {
 	font-size: 1.3rem;
 	text-align: center;
 	font-weight: 700;

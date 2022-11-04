@@ -113,3 +113,40 @@ function conflict_show_themes(){
 		echo '&nbsp;';
 	}
 }
+
+function conflict_partners(){
+	// WP QUERY LOOP
+	$html = '';
+	 $args = array(
+	      'posts_per_page' => 40,
+	      'post_type'   => 'partner', 
+	      'post_status' => 'publish',
+	      'orderby' => 'title',
+    	  'order'   => 'ASC', 
+	      'nopaging' => false,
+	                    );
+	  $the_query = new WP_Query( $args );
+	                    if( $the_query->have_posts() ): 
+	                      while ( $the_query->have_posts() ) : $the_query->the_post();
+	                       //DO YOUR THING
+	                      	$title = get_the_title();
+	                      	$content = get_the_content();
+	                      	$img = conflict_resource_image();
+	                         $html .= " <div class='col-md-3 card-holder'>
+							            <div class='card position-relative partner-facet'>
+							                   {$img}
+							              <div class='card-body'>
+							                <div class='title'>{$title}</div>
+							                <div class='content'>{$content}</div>
+							              </div>
+							            </div>
+   								 </div>";
+	                         endwhile;
+	                  endif;
+	            wp_reset_query();  // Restore global post data stomped by the_post().
+	   echo "<div class='row'>{$html}</div>";
+}                    
+
+
+
+
