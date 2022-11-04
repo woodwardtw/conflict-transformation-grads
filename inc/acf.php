@@ -8,6 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+
+//show fellow(s) or project(s) 
 function conflict_show_relationship($heading){
     if(get_field('fellow_relationship')){
         $relationship = get_field('fellow_relationship');
@@ -29,7 +31,16 @@ function conflict_show_relationship($heading){
     }
 }
 
+//show explore more link 
 
+function conflict_explore_more(){
+    if(get_field('explore_more_link')){
+        $link = get_field('explore_more_link');        
+        echo "<a href='{$link}' class='btn btn-primary btn-explore'>Explore More</a>";
+    }
+}
+
+//connect projects and fellows through the relationship
 function conflict_bidirectional_acf_update_value( $value, $post_id, $field  ) {
     
     // vars

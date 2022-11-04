@@ -17122,4 +17122,13 @@ article {
   display: block;
 }
 
+.btn-explore {
+  width: 200px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
 /*# sourceMappingURL=theme.css.map */
