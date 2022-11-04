@@ -17110,7 +17110,7 @@ article {
   transition: all 0.4s ease;
 }
 
-.home-block:hover, .relation:hover {
+.home-block:hover, .relation:hover, .card.fellow-facet:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
   box-shadow: 6px 6px #dedede;
@@ -17144,6 +17144,31 @@ article {
 
 .relation h3, .relation .h3 {
   display: inline-block;
+}
+
+.fellow-img {
+  display: block;
+  border-radius: 50%;
+  margin: 20px auto;
+  max-width: 80%;
+  border: 3px solid #fff;
+  outline: 1px solid #0d395f;
+}
+
+.card.fellow-facet {
+  border-radius: 0;
+  border-color: #0d395f;
+  transition: all 0.4s ease;
+  margin: 20px 0;
+  background-color: #e5f1fa;
+}
+
+.fellow-facet a {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
 }
 
 /*# sourceMappingURL=theme.css.map */

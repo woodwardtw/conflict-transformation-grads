@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php echo facetwp_display( 'template', 'fellows' );?>
 		</div>
 		<?php
-		the_content();
+		//the_content();
 		understrap_link_pages();
 		?>
 

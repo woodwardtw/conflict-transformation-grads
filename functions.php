@@ -61,8 +61,10 @@ add_filter( 'facetwp_shortcode_html', function( $output, $atts) {
 
 function conflict_resource_image(){
 	$id = get_the_ID();
-	$thumb = get_the_post_thumbnail($id, 'medium', array('class'=>'fellow-img'));
+	$thumb = get_the_post_thumbnail($id, 'thumbnail', ['class'=>'fellow-img img-fluid']);
 	return $thumb;
 }
+
+set_post_thumbnail_size(200, 200, true);
 
 add_image_size( 'fellow', 500, 500, true );
