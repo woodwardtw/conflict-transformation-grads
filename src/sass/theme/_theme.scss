@@ -33,6 +33,7 @@ article {
 
 .home-block a {
 	text-decoration: none;
+	font-family: 'Domine', georgia, serif;
 }
 
 .home-link {
@@ -71,7 +72,7 @@ article {
 	margin: 20px auto;	
 	max-width: 80%;
 	border: 3px solid #fff; 
-    outline: 1px solid $primary;
+    outline: 3px solid $primary;
 }
 
 .card.fellow-facet, .card.project-facet, .card.partner-facet {
@@ -90,6 +91,7 @@ article {
 	text-decoration: none;
 	display: block;
 	margin-bottom: 30px;
+	font-family: 'Domine', georgia, serif;
 }
 
 .year {
@@ -97,4 +99,12 @@ article {
 	font-size: .8rem;
 	margin: 15px;
 	text-align: right;
+}
+
+.plain-page .content-area, .plain-page #right-sidebar{
+	padding: 5vw;
+}
+
+#right-sidebar h2, #right-sidebar h3 {
+	margin-top: 20px;
 }
