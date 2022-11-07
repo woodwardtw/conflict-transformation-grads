@@ -17089,6 +17089,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "Domine", georgia, serif;
+  color: #0d395f;
 }
 
 p, ul, ol {
@@ -17106,7 +17107,7 @@ article {
   height: 300px;
   text-align: center;
   font-size: 2rem;
-  border: 1px solid #0d395f;
+  border: 3px solid #0d395f;
   transition: all 0.4s ease;
 }
 
@@ -17115,6 +17116,10 @@ article {
   transform: scale(1.02);
   box-shadow: 6px 6px 5px #dedede;
   background-color: #e5f1fa;
+}
+
+.home-block a {
+  text-decoration: none;
 }
 
 .home-link {
@@ -17161,6 +17166,7 @@ article {
   transition: all 0.4s ease;
   margin: 20px 0;
   background-color: #fff;
+  border: 3px solid #0d395f;
 }
 
 .fellow-facet a, .project-facet a, .partner-facet .title {

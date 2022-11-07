@@ -2,6 +2,7 @@
 
 h1, h2, h3, h4, h5 {
 	font-family: 'Domine', georgia, serif;
+	color: $primary;
 }
 
 p, ul, ol {
@@ -20,7 +21,7 @@ article {
 	height: 300px;
 	text-align: center;
 	font-size: 2rem;
-	border: 1px solid $blue;
+	border: 3px solid $blue;
 	transition: all .4s ease;
 }
 
@@ -28,6 +29,10 @@ article {
   	transform: scale(1.02);
   	box-shadow: 6px 6px 5px $gray;
   	background-color: $light-blue;
+}
+
+.home-block a {
+	text-decoration: none;
 }
 
 .home-link {
@@ -75,6 +80,7 @@ article {
 	transition: all .4s ease;
 	margin: 20px 0;
 	background-color: #fff;
+	border: 3px solid $primary;
 }
 
 .fellow-facet a, .project-facet a, .partner-facet .title {
