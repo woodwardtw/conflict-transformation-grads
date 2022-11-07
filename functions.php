@@ -147,6 +147,21 @@ function conflict_partners(){
 	   echo "<div class='row'>{$html}</div>";
 }                    
 
-
-
+//from https://mekshq.com/change-image-alt-tag-in-wordpress/
+/* Register callback function for post_thumbnail_html filter hook */
+//add_filter( 'post_thumbnail_html', 'meks_post_thumbnail_alt_change', 10, 5 );
+ 
+/* Function which will replace alt atribute to post title */
+function meks_post_thumbnail_alt_change( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+	$post_title = get_the_title();
+	if(str_contains($html,'alt ')){
+		$html = str_replace(
+	    ' alt ',
+	  	 "alt='An image representing {$post_title}.'" ,
+	    $html);
+	}
+ 
+	return $html;
+ 
+}
 
