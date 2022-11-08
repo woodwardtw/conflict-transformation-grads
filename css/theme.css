@@ -17099,7 +17099,7 @@ p, ul, ol {
 }
 
 article {
-  margin: 0 4vw;
+  margin: 0 5vw;
 }
 
 .entry-title {
@@ -17183,7 +17183,7 @@ article {
   line-height: 150%;
 }
 
-.type-project h1, .type-project .h1, .type-fellow h1, .type-fellow .h1 {
+.type-project h1, .type-project .h1, .type-fellow h1, .type-fellow .h1, .entry-title {
   font-size: clamp(2rem, 10vw, 4rem);
   text-align: center;
   margin: 70px 0;
@@ -17225,19 +17225,30 @@ article {
   padding: 6vw;
 }
 
+.plain-page .entry-title {
+  border-bottom: 3px dashed #0d395f;
+  padding-bottom: 50px;
+}
+
+#right-sidebar {
+  border-left: 3px dashed #0d395f;
+}
+
 #right-sidebar h2, #right-sidebar .h2, #right-sidebar h3, #right-sidebar .h3 {
   margin-top: 20px;
 }
 
 .relation {
   padding: 30px;
+  text-align: center;
 }
 
 .relationship-img {
   border-radius: 50%;
-  margin: 30px;
+  margin: 30px auto;
   border: 3px solid #fff;
   outline: 3px solid #0d395f;
+  display: block;
 }
 
 .description {
