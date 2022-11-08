@@ -21,19 +21,23 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content">
 		<div class="row">
-			<div class="col-md-5">
+			<div class="col-md-3">
 					<?php 
 						echo get_the_post_thumbnail( $post->ID, 'medium', array('class'=>'img-fluid') ); 
 						conflict_show_years();
 						conflict_show_themes();
 					?>
 			</div>
-			<div class="col-md-7">
+			<div class="col-md-6">
 				<?php
 				the_content();
 				conflict_explore_more();
-				conflict_show_relationship('Fellow');
 				?>
+			</div>
+			<div class="col-md-3">
+					<?php 
+						conflict_show_relationship('Fellow');
+					?>
 			</div>
 		</div>
 

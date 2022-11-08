@@ -11,15 +11,16 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-	</header><!-- .entry-header -->
 
 
 	<div class="entry-content">
 		<div class="row facet-row">
+			<div class="col-md-3">
+				<div class="home-facet">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</div>
+			</div>
 			<div class="col-md-3">
 				<div class="home-facet">
 					<h2>Search</h2>

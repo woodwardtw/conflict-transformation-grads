@@ -82,12 +82,23 @@ article {
 .facet-row {
 	border-bottom: 3px dashed $primary;
 	border-top: 3px dashed $primary;
-    margin-bottom: 70px;
+    margin: 70px 0 70px 0;
 }
 
 .home-facet {
 	border-right: 3px dashed $primary;
 	padding: 20px;
+	height: 100%;
+}
+
+.home-facet h1 {
+	margin: 0;
+	font-size: 5rem;
+    line-height: 150%;
+}
+
+.facet-row .col-md-3:nth-of-type(4) .home-facet {
+	border-right: none;
 }
 
 .card.fellow-facet, .card.project-facet, .card.partner-facet, .relation {
