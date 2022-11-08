@@ -17165,6 +17165,17 @@ article {
   outline: 3px solid #0d395f;
 }
 
+.facet-row {
+  border-bottom: 3px dashed #0d395f;
+  border-top: 3px dashed #0d395f;
+  margin-bottom: 70px;
+}
+
+.home-facet {
+  border-right: 3px dashed #0d395f;
+  padding: 20px;
+}
+
 .card.fellow-facet, .card.project-facet, .card.partner-facet, .relation {
   border-radius: 0;
   border-color: #0d395f;

@@ -19,20 +19,20 @@ defined( 'ABSPATH' ) || exit;
 
 
 	<div class="entry-content">
-		<div class="row">
-			<div class="col-md-4">
+		<div class="row facet-row">
+			<div class="col-md-3">
 				<div class="home-facet">
 					<h2>Search</h2>
 					<?php echo facetwp_display( 'facet', 'search' );?>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<div class="home-facet">
 					<h2>Filter by topic</h2>
 					<?php echo facetwp_display( 'facet', 'topic' );?>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<div class="home-facet">
 					<h2>Filter by class year</h2>
 					<?php echo facetwp_display( 'facet', 'year' );?>

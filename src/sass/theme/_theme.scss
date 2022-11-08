@@ -79,6 +79,17 @@ article {
     outline: 3px solid $primary;
 }
 
+.facet-row {
+	border-bottom: 3px dashed $primary;
+	border-top: 3px dashed $primary;
+    margin-bottom: 70px;
+}
+
+.home-facet {
+	border-right: 3px dashed $primary;
+	padding: 20px;
+}
+
 .card.fellow-facet, .card.project-facet, .card.partner-facet, .relation {
 	border-radius: 0;
 	border-color: $primary;
