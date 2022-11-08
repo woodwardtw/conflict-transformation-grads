@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content">
+	<div class="entry-content project-boxes">
 		<div class="row">
 			<div class="col-md-3">
 					<?php 
@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
 						conflict_show_themes();
 					?>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 description">
 				<?php
 				the_content();
 				conflict_explore_more();

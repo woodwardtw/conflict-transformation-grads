@@ -17179,8 +17179,14 @@ article {
 
 .home-facet h1, .home-facet .h1 {
   margin: 0;
-  font-size: 5rem;
+  font-size: clamp(2rem, 10vw, 4rem);
   line-height: 150%;
+}
+
+.type-project h1, .type-project .h1, .type-fellow h1, .type-fellow .h1 {
+  font-size: clamp(2rem, 10vw, 4rem);
+  text-align: center;
+  margin: 70px 0;
 }
 
 .facet-row .col-md-3:nth-of-type(4) .home-facet {
@@ -17232,6 +17238,30 @@ article {
   margin: 30px;
   border: 3px solid #fff;
   outline: 3px solid #0d395f;
+}
+
+.description {
+  padding: 0 80px;
+}
+
+.fellows-boxes .row {
+  border-top: 3px dashed #0d395f;
+}
+
+.fellows-boxes .col-md-3,
+.fellows-boxes .col-md-6,
+.projects-boxes .col-md-3,
+.projects-boxes .col-md-6 {
+  padding-top: 70px;
+  height: 100%;
+}
+
+.fellows-boxes .row .col-md-3:nth-of-type(1) {
+  border-right: 3px dashed #0d395f;
+}
+
+.fellows-boxes .row .col-md-3:nth-of-type(3) {
+  border-left: 3px dashed #0d395f;
 }
 
 /*# sourceMappingURL=theme.css.map */
