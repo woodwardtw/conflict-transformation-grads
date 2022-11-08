@@ -16,6 +16,10 @@ article {
 	margin: 0 4vw;
 }
 
+.entry-title {
+	margin: 0 0 50px 0;
+}
+
 .home-block {
 	margin: 20px;
 	height: 300px;
@@ -101,14 +105,15 @@ article {
 	text-align: right;
 }
 
-.plain-page .content-area, .plain-page #right-sidebar, .fellow .content-area, .fellow #right-sidebar{
-	padding: 5vw;
+.plain-page .content-area, .plain-page #right-sidebar, 
+.fellow .content-area, .fellow #right-sidebar, 
+.project .content-area, .project #right-sidebar{
+	padding: 6vw;
 }
 
 #right-sidebar h2, #right-sidebar h3 {
 	margin-top: 20px;
 }
-
 
 .relation {
 	padding: 30px;
