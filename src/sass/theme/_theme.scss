@@ -158,7 +158,8 @@ article {
 	padding: 0 80px;
 }
 
-.fellows-boxes .row {
+.fellows-boxes .row,
+.projects-boxes .row {
 	border-top: 3px dashed $primary;
 }
 
@@ -170,10 +171,14 @@ article {
 	height: 100%;
 }
 
-.fellows-boxes .row .col-md-3:nth-of-type(1){
-	border-right: 3px dashed $primary;
+.fellows-boxes .col-md-3, 
+.projects-boxes .col-md-3{
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
-.fellows-boxes .row .col-md-3:nth-of-type(3){
+.fellows-boxes .row .col-md-6,
+.projects-boxes .row .col-md-6{
+	border-right: 3px dashed $primary;
 	border-left: 3px dashed $primary;
 }

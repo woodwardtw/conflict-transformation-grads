@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content project-boxes">
+	<div class="entry-content projects-boxes">
 		<div class="row">
 			<div class="col-md-3">
 					<?php 
