@@ -17161,7 +17161,7 @@ article {
   outline: 3px solid #0d395f;
 }
 
-.card.fellow-facet, .card.project-facet, .card.partner-facet {
+.card.fellow-facet, .card.project-facet, .card.partner-facet, .relation {
   border-radius: 0;
   border-color: #0d395f;
   transition: all 0.4s ease;
@@ -17170,7 +17170,7 @@ article {
   border: 3px solid #0d395f;
 }
 
-.fellow-facet a, .project-facet a, .partner-facet .title {
+.fellow-facet a, .project-facet a, .partner-facet .title, .relation a {
   font-size: 1.3rem;
   text-align: center;
   font-weight: 700;
@@ -17187,12 +17187,23 @@ article {
   text-align: right;
 }
 
-.plain-page .content-area, .plain-page #right-sidebar {
+.plain-page .content-area, .plain-page #right-sidebar, .fellow .content-area, .fellow #right-sidebar {
   padding: 5vw;
 }
 
 #right-sidebar h2, #right-sidebar .h2, #right-sidebar h3, #right-sidebar .h3 {
   margin-top: 20px;
+}
+
+.relation {
+  padding: 30px;
+}
+
+.relationship-img {
+  border-radius: 50%;
+  margin: 30px;
+  border: 3px solid #fff;
+  outline: 3px solid #0d395f;
 }
 
 /*# sourceMappingURL=theme.css.map */
