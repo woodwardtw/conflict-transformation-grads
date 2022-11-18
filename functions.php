@@ -132,11 +132,12 @@ function conflict_partners(){
 	                      	$title = get_the_title();
 	                      	$content = get_the_content();
 	                      	$img = conflict_resource_image();
+	                      	$url = get_field('partner_link');
 	                         $html .= " <div class='col-md-3 card-holder'>
 							            <div class='card position-relative partner-facet'>
 							                   {$img}
 							              <div class='card-body'>
-							                <div class='title'>{$title}</div>
+							                <div class='title'><a class='stretched-link' href='{$url}''>{$title}</a></div>
 							                <div class='content'>{$content}</div>
 							              </div>
 							            </div>
