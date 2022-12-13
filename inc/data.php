@@ -283,3 +283,39 @@ function create_year_taxonomies()
 }
 
 
+add_action( 'init', 'create_degree_taxonomies', 0 );
+function create_degree_taxonomies()
+{
+  // Add new taxonomy, NOT hierarchical (like tags)
+  $labels = array(
+    'name' => _x( 'Degrees', 'taxonomy general name' ),
+    'singular_name' => _x( 'degree', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Degrees' ),
+    'popular_items' => __( 'Popular Degrees' ),
+    'all_items' => __( 'All Degrees' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Degrees' ),
+    'update_item' => __( 'Update degree' ),
+    'add_new_item' => __( 'Add New degree' ),
+    'new_item_name' => __( 'New degree' ),
+    'add_or_remove_items' => __( 'Add or remove Degrees' ),
+    'choose_from_most_used' => __( 'Choose from the most used Degrees' ),
+    'menu_name' => __( 'Degree' ),
+  );
+
+//registers taxonomy specific post types - default is just post
+  register_taxonomy('degrees', array('fellow'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'degree' ),
+    'show_in_rest'          => true,
+    'rest_base'             => 'degree',
+    'rest_controller_class' => 'WP_REST_Terms_Controller',
+    'show_in_nav_menus' => true,    
+  ));
+}
+
