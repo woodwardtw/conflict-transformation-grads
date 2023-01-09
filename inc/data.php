@@ -342,7 +342,7 @@ function create_semester_taxonomies()
   );
 
 //registers taxonomy specific post types - default is just post
-  register_taxonomy('semesters', array('post'), array(
+  register_taxonomy('semesters', array('fellow'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,
