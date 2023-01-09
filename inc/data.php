@@ -363,7 +363,7 @@ function cftg_populate_fellow_semester($form){
 
 
     $terms = get_terms( array(
-        'taxonomy' => 'semester',
+        'taxonomy' => 'semesters',
         'hide_empty' => false,
         'orderby'   =>'title',
         'order'   =>'ASC',
