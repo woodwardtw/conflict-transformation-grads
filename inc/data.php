@@ -391,3 +391,38 @@ function cftg_populate_fellow_semester($form){
 
     return $form;
 }
+
+
+add_filter('gform_pre_render_1', 'cftg_populate_fellow_year');
+function cftg_populate_fellow_year($form){
+
+
+    $terms = get_terms( array(
+        'taxonomy' => 'years',
+        'hide_empty' => false,
+        'orderby'   =>'title',
+        'order'   =>'ASC',
+    ) );
+
+    //Creating drop down item array.
+    $items = array();
+
+    //Adding initial blank value.
+    $items[] = array("text" => "", "value" => "");
+
+    //Adding post titles to the items array
+    foreach($terms as $term)
+        $items[] = array(
+           "value" => $term->term_id, 
+           "text" =>  $term->name
+      );
+
+    //Adding items to field id 6
+    foreach($form["fields"] as &$field)
+        if($field["id"] == 7){
+            $field["type"] = "select";
+            $field["choices"] = $items;
+        }
+
+    return $form;
+}
