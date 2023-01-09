@@ -319,3 +319,40 @@ function create_degree_taxonomies()
   ));
 }
 
+
+add_action( 'init', 'create_semester_taxonomies', 0 );
+function create_semester_taxonomies()
+{
+  // Add new taxonomy, NOT hierarchical (like tags)
+  $labels = array(
+    'name' => _x( 'Semesters', 'taxonomy general name' ),
+    'singular_name' => _x( 'semester', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Semesters' ),
+    'popular_items' => __( 'Popular Semesters' ),
+    'all_items' => __( 'All Semesters' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Semesters' ),
+    'update_item' => __( 'Update semester' ),
+    'add_new_item' => __( 'Add New semester' ),
+    'new_item_name' => __( 'New semester' ),
+    'add_or_remove_items' => __( 'Add or remove Semesters' ),
+    'choose_from_most_used' => __( 'Choose from the most used Semesters' ),
+    'menu_name' => __( 'Semester' ),
+  );
+
+//registers taxonomy specific post types - default is just post
+  register_taxonomy('semesters', array('post'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'semester' ),
+    'show_in_rest'          => true,
+    'rest_base'             => 'semester',
+    'rest_controller_class' => 'WP_REST_Terms_Controller',
+    'show_in_nav_menus' => true,    
+  ));
+}
+
