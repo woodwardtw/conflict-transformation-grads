@@ -413,7 +413,7 @@ function cftg_populate_fellow_year($form){
     //Adding post titles to the items array
     foreach($terms as $term)
         $items[] = array(
-           "value" => $term->term_id, 
+           "value" => $term->name, 
            "text" =>  $term->name
       );
 
