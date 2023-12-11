@@ -87,6 +87,7 @@ function conflict_show_years(){
 			$term_id = $term->term_id;
 			$link = get_term_link( $term_id, 'years' );
 			echo "<div class='year-link'>
+					<h2>Fellowship year</h2>
 					<a href='{$link}'>{$name}</a>
 				</div>";
 		}
