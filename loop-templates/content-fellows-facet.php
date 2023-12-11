@@ -29,13 +29,13 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 			<div class="col-md-3">
 				<div class="home-facet">
-					<h2>Filter by topic</h2>
+					<h2>Fellowship topic</h2>
 					<?php echo facetwp_display( 'facet', 'topic' );?>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="home-facet">
-					<h2>Filter by class year</h2>
+					<h2>Fellowship year</h2>
 					<?php echo facetwp_display( 'facet', 'year' );?>
 				</div>
 			</div>
